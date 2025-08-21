@@ -1,0 +1,11 @@
+Cosas que me llamaron la atención
+
+* Ya no pierdes tiempo pensando en nombres de clases
+* relative en un contenedor cualquiera porque tendremos algún hijo inmediato con absolute en algún momento
+* Nunca abandonas el html mientras trabajas, no tienes que estar cambiando de archivo y buscando la línea de código que necesitas, entonces cuanto tiempo ahorrar
+* Mucho menos código con tailwind que con css nativo
+* Se puede pensar que poner estilos en el HTML es una mala práctica, pero, la realidad es que, las buenas prácticas evolucionan con el tiempo, entonces, con tailwind, colocar estilos en el HTML ya no es considerado una mala práctica
+* Cuado se trabaja con tailwind uno se acostumbra a esta forma de estructurar el código, especialmente cuando se empieza a beneficiar de sus ventajas
+* Realiza cambios de manera segura sin hacer cambios en otra parte de tu aplicación
+* Cuando en CSS nativo la propiedad empieza con "font" entonces en tailwind la utilidad tambien lleva font al inicio, las demás utilidades inician con text, incluso text-color aunque en css sea color, con la regla de font ya nos podemos acordar, nos podemos acordar que la prioridad es la F, por alt+F4, igualmente las puedo memorizar y voy más rápido
+* Utilidad de tailwind es una clase para una propiedad especifica con un valor especifico
