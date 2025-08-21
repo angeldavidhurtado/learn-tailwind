@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-	--color-blue: #0f0;
+	/* variables */
+	--color-coffe: #B68668; /* colores */
+	--spacing-card: 25dvh; /* medidas */
+
+	/* sobrescribe colores de tailwind */
+	--color-blue-500: #0f0;
 }
