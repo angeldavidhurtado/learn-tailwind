@@ -73,6 +73,34 @@ function App() {
           disabled={true}
         />
       </form>
+
+      <label
+        className='after:content-["*"] after:ml-2 after:text-red-500 bg-white'
+      >
+        Email:
+      </label>
+      <input
+        className='placeholder:text-blue-700 bg-white outline-none'
+        type="email"
+        placeholder='Email'
+      />
+
+      <input
+        className='block bg-white file:bg-amber-500 file:rounded-full file:px-3 file:py-1 file:cursor-pointer hover:file:bg-amber-800'
+        type="file"
+      />
+
+      <ul className='list-disc marker:text-sky-400 ml-8 text-sky-400'>
+        <li>React</li>
+        <li>Tailwind</li>
+        <li>TypeScript</li>
+      </ul>
+
+      <p
+        className='selection:bg-green-400 selection:underline first-line:uppercase first-letter:font-bold first-letter:text-7xl first-letter:float-left first-letter:mr-2 w-3/4 m-auto bg-white px-4 py-3 rounded-md'
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quod, earum recusandae repellendus nemo similique, magnam vitae, nulla fugiat sed assumenda quibusdam iusto quae ducimus blanditiis est alias nam temporibus.
+      </p>
     </>
   )
 }
