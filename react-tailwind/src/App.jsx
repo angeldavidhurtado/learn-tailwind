@@ -1,4 +1,17 @@
+import { useState } from 'react'
+
 function App() {
+  const [name, setName] = useState('Ángel')
+  const [lastName, setLastName] = useState('Hurtado')
+
+  const handleChangeName = e => {
+    setName(e.target.value)
+  }
+
+  const handleChangeLastName = e => {
+    setName(e.target.value)
+  }
+
   return (
     <>
       <h1 className='bg-coffe text-[#FFEECF] sm:bg-cyan-800 desktop:bg-blue-400'>
@@ -34,6 +47,32 @@ function App() {
       <button className='hover:bg-blue-800 bg-blue-700 cursor-pointer text-white text-lg px-4 py-2 rounded-md'>
         Hola
       </button>
+
+      <ol className='p-5'>
+        <li className='text-white first:bg-amber-200 first:text-black last:bg-cyan-500 only:bg-orange-500'>HTML</li>
+        <li className='text-white first:bg-amber-200 first:text-black last:bg-cyan-500 only:bg-orange-500'>CSS</li>
+        <li className='text-white first:bg-amber-200 first:text-black last:bg-cyan-500 only:bg-orange-500'>Tailwind</li>
+      </ol>
+
+      <form>
+        <input
+          className='text-white border border-white required:border-red-500'
+          type="text"
+          placeholder="Nombre"
+          value={name}
+          onChange={handleChangeName}
+          required={true}
+        />
+
+        <input
+          className='text-white border border-white disabled:bg-gray-400'
+          type="text"
+          placeholder="Apellido"
+          value={lastName}
+          onChange={handleChangeLastName}
+          disabled={true}
+        />
+      </form>
     </>
   )
 }
