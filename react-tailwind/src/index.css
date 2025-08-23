@@ -27,3 +27,7 @@ html {
 	/* container query */
 	--container-sm: 31.25rem;
 }
+
+.button {
+	@apply bg-violet-800 text-center rounded-sm;
+}
