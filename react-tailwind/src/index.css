@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 html {
+	/*
+	cambia el valor de 1rem
 	font-size: 1px;
+	*/
 }
 
 @theme {
@@ -13,5 +16,14 @@ html {
 	--color-blue-500: #0f0;
 
 	/* disenio responsive */
-	--breakpoint-sm: 23px
+	/*
+	sobre escribiendo breakpoints
+	--breakpoint-sm: 27.75rem;
+	*/
+	/* crea nuevos breakpoints */
+	--breakpoint-tablet: 45rem;
+	--breakpoint-desktop: 57.5rem;
+
+	/* container query */
+	--container-sm: 31.25rem;
 }

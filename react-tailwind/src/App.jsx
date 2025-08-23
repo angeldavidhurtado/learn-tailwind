@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1 className='bg-coffe text-[#FFEECF] sm:bg-cyan-800'>
+      <h1 className='bg-coffe text-[#FFEECF] sm:bg-cyan-800 desktop:bg-blue-400'>
         Vite + React
       </h1>
       <p className='w-1/4 bg-amber-800 text-amber-100 m-auto'>
@@ -18,6 +18,22 @@ function App() {
         <div className='bg-violet-800 text-center rounded-sm'>3</div>
         <div className='bg-violet-800 text-center rounded-sm -col-end-1 col-span-2'>4</div>
       </div>
+
+      <p className='text-white tablet:max-desktop:bg-amber-200 tablet:max-desktop:text-black'>
+        Cambio de color en rango
+      </p>
+
+      <div className='@container resize overflow-hidden mb-5 border border-white m-5 rounded-md w-1/2'>
+        <div className='flex @sm:flex-col gap-1'>
+          <div className='bg-violet-700 text-white text-center rounded-md grow'>1</div>
+          <div className='bg-violet-700 text-white text-center rounded-md grow'>2</div>
+          <div className='bg-violet-700 text-white text-center rounded-md grow'>3</div>
+        </div>
+      </div>
+
+      <button className='hover:bg-blue-800 bg-blue-700 cursor-pointer text-white text-lg px-4 py-2 rounded-md'>
+        Hola
+      </button>
     </>
   )
 }
