@@ -26,8 +26,50 @@ html {
 
 	/* container query */
 	--container-sm: 31.25rem;
+
+	/*
+	Todas las variables en
+	https://tailwindcss.com/docs/theme
+	*/
+
+	/*
+	<div class="container"></div> - ancho al ancho del breakpoint correspondiente
+
+	inset solo afecta a elementos absolute, fixed o sticky
+	inset es equivalente a top right bottom left
+	.elemento {
+	  position: absolute;
+		inset: 0;
+	}
+	es equivalente a
+	.elemento {
+	  position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+  inset: 10px 5px 20px;
+	quivalente a
+	atop-10px bottom-20px left-5px right-5px
+
+
+	Mañana
+	1. container, space-x-x y space-y-x cául es la diferencia con gap-x y gap-y
+	2. hacer boton dark-theme como fazt con localstorage
+	Lunes
+	Práctica Tailwind
+
+	Otras
+	Ver el otro video
+	Escribir articulo para iniciar proyecto react + tailwind
+	*/
 }
 
-.button {
-	@apply bg-violet-800 text-center rounded-sm;
+@layer components {
+	.button {
+		@apply bg-violet-800 text-center rounded-sm;
+	}
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

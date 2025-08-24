@@ -9,3 +9,6 @@ Cosas que me llamaron la atención
 * Realiza cambios de manera segura sin hacer cambios en otra parte de tu aplicación
 * Cuando en CSS nativo la propiedad empieza con "font" entonces en tailwind la utilidad tambien lleva font al inicio, las demás utilidades inician con text, incluso text-color aunque en css sea color, con la regla de font ya nos podemos acordar, nos podemos acordar que la prioridad es la F, por alt+F4, igualmente las puedo memorizar y voy más rápido
 * Utilidad de tailwind es una clase para una propiedad especifica con un valor especifico
+
+Todas las variables en:
+https://tailwindcss.com/docs/theme

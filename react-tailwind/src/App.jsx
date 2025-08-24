@@ -9,12 +9,26 @@ function App() {
   }
 
   const handleChangeLastName = e => {
-    setName(e.target.value)
+    setLastName(e.target.value)
   }
 
+  // tema oscuro
+
   return (
-    <>
-      <h1 className='bg-coffe text-[#FFEECF] sm:bg-cyan-800 desktop:bg-blue-400'>
+    <div className='absolute'>
+      <button>Oscuro</button>
+
+      <p className='bg-orange-400 dark:bg-pink-300'>
+        Modo oscuro
+      </p>
+
+      <img
+        className='drop-shadow-xl drop-shadow-green-800 -z-10 relative m-auto max-w-full'
+        src="/guitar.webp"
+        alt=""
+      />
+
+      <h1 className='bg-coffe text-[#FFEECF] sm:bg-cyan-800 desktop:bg-blue-400 z-10 relative'>
         Vite + React
       </h1>
       <p className='w-1/4 bg-amber-800 text-amber-100 m-auto'>
@@ -26,7 +40,7 @@ function App() {
       <div className='w-32 h-24 border-4 border-orange-400 bg-zinc-400 rounded-md'></div>
 
       <div className='grid grid-cols-3 text-white border border-amber-200 w-3xs m-5 gap-2 rounded-sm'>
-        <div className='button col-start-2'>1</div>
+        <div className='button bg-violet-950 col-start-2'>1</div>
         <div className='button col-start-1 col-span-full'>2</div>
         <div className='button'>3</div>
         <div className='button -col-end-1 col-span-2'>4</div>
@@ -90,7 +104,7 @@ function App() {
         type="file"
       />
 
-      <ul className='list-disc marker:text-sky-400 ml-8 text-sky-400'>
+      <ul className='inset-0 list-disc marker:text-sky-400 ml-8 text-sky-400'>
         <li>React</li>
         <li>Tailwind</li>
         <li>TypeScript</li>
@@ -101,7 +115,22 @@ function App() {
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quod, earum recusandae repellendus nemo similique, magnam vitae, nulla fugiat sed assumenda quibusdam iusto quae ducimus blanditiis est alias nam temporibus.
       </p>
-    </>
+
+      <div className="container mx-auto bg-white :bg-amber-500">
+        <p>Contenido centrado y con máximo ancho por pantalla</p>
+      </div>
+
+      <div className="relative h-40 bg-emerald-700">
+        <div className="absolute bg-blue-200 inset-0">
+          Cubre todo el contenedor
+        </div>
+      </div>
+      <div className="absolute h-40 bg-emerald-700">
+        <div className="relative bg-blue-200 inset-0">
+          Cubre todo el contenedor
+        </div>
+      </div>
+    </div>
   )
 }
 
