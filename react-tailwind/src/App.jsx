@@ -17,41 +17,7 @@ function App() {
       return 'system'
   })
 
-
-  /*
   // Apply theme
-  useEffect(() => {
-    const htmlElement = document.documentElement
-
-    if (theme === 'light')
-      htmlElement.classList.remove('dark')
-    else if (theme === 'dark')
-      htmlElement.classList.add('dark')
-    else if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-
-      const isDark = mediaQuery.matches
-      setTheme(isDark ? 'dark' : 'light')
-      if (isDark)
-        htmlElement.classList.add('dark')
-      else
-        htmlElement.classList.remove('dark')
-
-      const handlerSystemThemeChange = e => {
-        console.log('cambio del sistema')
-        setTheme(e.matches ? 'dark' : 'light')
-      }
-      mediaQuery.addEventListener('change', handlerSystemThemeChange)
-
-      // Clear the listener event when unmounting the component
-      // return () => mediaQuery.removeEventListener('change', handlerSystemThemeChange)
-      return () => { console.log('chao') }
-    }
-  }, [theme])
-  */
-
-
-  // useEffect para manejar el tema
   useEffect(() => {
     const htmlElement = document.documentElement
     localStorage.setItem('theme', theme)
@@ -63,23 +29,15 @@ function App() {
     else if (theme === 'system') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
-      // Función para manejar los cambios del tema del sistema
-      const handleSystemChange = e => {
-        // Solo actualiza si la opción del usuario es 'system'
+      const handlerSystemThemeChange = e => {
         htmlElement.classList.toggle('dark', e.matches)
       }
-
       htmlElement.classList.toggle('dark', mediaQuery.matches)
-      mediaQuery.addEventListener('change', handleSystemChange)
+      mediaQuery.addEventListener('change', handlerSystemThemeChange)
 
-      // Función de limpieza - Se asegura de eliminar el listener, solo si fue agregado
-      return () => {
-        console.log('Removio el evento')
-        mediaQuery.removeEventListener('change', handleSystemChange)
-      }
+      return () => mediaQuery.removeEventListener('change', handlerSystemThemeChange)
     }
   }, [theme])
-  // htmlElement.classList.toggle('dark', savedTheme === 'dark')
 
 
   return (
