@@ -1,26 +1,116 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [name, setName] = useState('Ángel')
   const [lastName, setLastName] = useState('Hurtado')
+  const handleChangeName = e => setName(e.target.value)
+  const handleChangeLastName = e => {}
 
-  const handleChangeName = e => {
-    setName(e.target.value)
-  }
+  const [theme, setTheme] = useState(() => {
+    const storageTheme = localStorage.getItem('theme')
 
-  const handleChangeLastName = e => {
-    setLastName(e.target.value)
-  }
+    if (storageTheme === 'light')
+      return 'light'
+    else if (storageTheme === 'dark')
+      return 'dark'
+    else
+      return 'system'
+  })
 
-  // tema oscuro
+
+  /*
+  // Apply theme
+  useEffect(() => {
+    const htmlElement = document.documentElement
+
+    if (theme === 'light')
+      htmlElement.classList.remove('dark')
+    else if (theme === 'dark')
+      htmlElement.classList.add('dark')
+    else if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+      const isDark = mediaQuery.matches
+      setTheme(isDark ? 'dark' : 'light')
+      if (isDark)
+        htmlElement.classList.add('dark')
+      else
+        htmlElement.classList.remove('dark')
+
+      const handlerSystemThemeChange = e => {
+        console.log('cambio del sistema')
+        setTheme(e.matches ? 'dark' : 'light')
+      }
+      mediaQuery.addEventListener('change', handlerSystemThemeChange)
+
+      // Clear the listener event when unmounting the component
+      // return () => mediaQuery.removeEventListener('change', handlerSystemThemeChange)
+      return () => { console.log('chao') }
+    }
+  }, [theme])
+  */
+
+
+  // useEffect para manejar el tema
+  useEffect(() => {
+    const htmlElement = document.documentElement
+    localStorage.setItem('theme', theme)
+
+    if (theme === 'light')
+      htmlElement.classList.remove('dark')
+    else if (theme === 'dark')
+      htmlElement.classList.add('dark')
+    else if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+      // Función para manejar los cambios del tema del sistema
+      const handleSystemChange = e => {
+        // Solo actualiza si la opción del usuario es 'system'
+        htmlElement.classList.toggle('dark', e.matches)
+      }
+
+      htmlElement.classList.toggle('dark', mediaQuery.matches)
+      mediaQuery.addEventListener('change', handleSystemChange)
+
+      // Función de limpieza - Se asegura de eliminar el listener, solo si fue agregado
+      return () => {
+        console.log('Removio el evento')
+        mediaQuery.removeEventListener('change', handleSystemChange)
+      }
+    }
+  }, [theme])
+  // htmlElement.classList.toggle('dark', savedTheme === 'dark')
+
 
   return (
     <div className='absolute'>
-      <button>Oscuro</button>
-
-      <p className='bg-orange-400 dark:bg-pink-300'>
-        Modo oscuro
-      </p>
+      <div
+        className='bg-white text-black dark:bg-black dark:text-white p-5 flex justify-between items-center'
+      >
+        <p>
+          Modo oscuro
+        </p>
+        <div className='flex gap-2'>
+          <button
+            className='border border-black px-2 py-1 rounded-md hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black'
+            onClick={() => setTheme('system')}
+          >
+            Sistema
+          </button>
+          <button
+            className='border border-black px-2 py-1 rounded-md hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black'
+            onClick={() => setTheme('light')}
+          >
+            Claro
+          </button>
+          <button
+            className='border border-black px-2 py-1 rounded-md hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black'
+            onClick={() => setTheme('dark')}
+          >
+            Oscuro
+          </button>
+        </div>
+      </div>
 
       <img
         className='drop-shadow-xl drop-shadow-green-800 -z-10 relative m-auto max-w-full'
