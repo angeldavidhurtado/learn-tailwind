@@ -1,6 +1,7 @@
 Cosas que me llamaron la atención
 
-Tailwind trabaja con el enfoque mobile first por defecto
+1. Primero definir los colores con los que se va a trabajar en la configuración de Tailwind o trabajar directamente con los colores de Tailwind
+2. Tailwind trabaja con el enfoque mobile first por defecto
 Así que al diseñar los estilos estan deben ser pensados primero para dispositivos mobiles y al hacer sm:, md:, los breakpoints, estos se aplican pero desde ese punto hacia "ARRIBA", a partir de ese punto y hacia arriba en tamaños de pantalla mayores, superiores se aplican los estilos, y los estilos mas pequeños no llevan prefijos porque ya está trabajando para mobil por defecto
 
 * Ya no pierdes tiempo pensando en nombres de clases
