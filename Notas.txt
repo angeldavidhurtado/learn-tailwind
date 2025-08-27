@@ -1,5 +1,8 @@
 Cosas que me llamaron la atención
 
+Tailwind trabaja con el enfoque mobile first por defecto
+Así que al diseñar los estilos estan deben ser pensados primero para dispositivos mobiles y al hacer sm:, md:, los breakpoints, estos se aplican pero desde ese punto hacia "ARRIBA", a partir de ese punto y hacia arriba en tamaños de pantalla mayores, superiores se aplican los estilos, y los estilos mas pequeños no llevan prefijos porque ya está trabajando para mobil por defecto
+
 * Ya no pierdes tiempo pensando en nombres de clases
 * relative en un contenedor cualquiera porque tendremos algún hijo inmediato con absolute en algún momento
 * Nunca abandonas el html mientras trabajas, no tienes que estar cambiando de archivo y buscando la línea de código que necesitas, entonces cuanto tiempo ahorrar
