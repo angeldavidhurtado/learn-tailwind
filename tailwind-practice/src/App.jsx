@@ -1,4 +1,4 @@
-import icons from './assets/icons.svg'
+import Icon from './components/Icon'
 
 function App() {
   return (
@@ -11,9 +11,7 @@ function App() {
         alt="Ángel David Hurtado"
       />
 
-      <svg className='fill-amber-100 size-5'>
-        <use href={`${icons}#email`} />
-      </svg>
+      <Icon iconSelect="email" />
     </>
   )
 }
