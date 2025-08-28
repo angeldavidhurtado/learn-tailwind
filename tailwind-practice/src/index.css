@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 body {
-	@apply bg-gradient-to-b from-black via-sky-950 to-gray-800 min-h-screen;
+	@apply text-amber-100 bg-gradient-to-b from-black via-sky-950 to-gray-800 min-h-screen;
 }
