@@ -28,6 +28,12 @@ function Profile() {
           </a>
         </li>
       </ul>
+      <div className='flex'>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
     </div>
   )
 }
