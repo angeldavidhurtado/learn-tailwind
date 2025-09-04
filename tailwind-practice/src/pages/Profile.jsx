@@ -27,6 +27,9 @@ function Profile() {
           </a>
         </li>
       </ul>
+      <p className='mt-4 text-center text-sm text-balance'>
+        Frontend Developer, React, Node.js, JavaScript, PostgreSQL, MongoDB, MySQL, HTML5, CSS3
+      </p>
       <div className='grid grid-cols-5 grid-rows-2 gap-2 mt-5'>
         <BentoItem
           iconSelect='react'
@@ -45,6 +48,7 @@ function Profile() {
           title='HTML'
           description='Maquetación'
           className='col-span-2 bg-gradient-to-br from-orange-700 via-orange-600 to-orange-800'
+          iconClassName='-right-2'
         />
         <BentoItem
           iconSelect='js'
