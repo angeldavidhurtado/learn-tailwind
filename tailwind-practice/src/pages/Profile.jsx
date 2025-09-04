@@ -11,17 +11,17 @@ function Profile() {
       />
       <h1 className='text-center text-3xl font-bold my-4'>Ángel David Hurtado</h1>
       <ul className='flex gap-2 justify-center'>
-        <li>
+        <li className='bg-black p-3 inline-block rounded-full'>
           <a href='https://www.linkedin.com/in/angeldavidhurtado' target='_blank'>
             <Icon iconSelect='linkedin' />
           </a>
         </li>
-        <li>
+        <li className='bg-black p-3 inline-block rounded-full'>
           <a href='https://github.com/angeldavidhurtado' target='_blank'>
             <Icon iconSelect='github' />
           </a>
         </li>
-        <li>
+        <li className='bg-black p-3 inline-block rounded-full'>
           <a href='https://medium.com/@angeldavidhurtado' target='_blank'>
             <Icon iconSelect='medium' />
           </a>
