@@ -28,7 +28,7 @@ function Profile() {
         </li>
       </ul>
       <p className='mt-4 text-center text-sm text-balance'>
-        Frontend Developer, React, Node.js, JavaScript, PostgreSQL, MongoDB, MySQL, HTML5, CSS3
+        Frontend Developer, React, Node.js, JavaScript, PostgreSQL, MongoDB, MySQL y Tailwind CSS
       </p>
       <div className='grid grid-cols-5 grid-rows-2 gap-2 mt-5'>
         <BentoItem
