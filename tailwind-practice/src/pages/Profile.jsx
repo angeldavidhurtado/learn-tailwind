@@ -1,38 +1,47 @@
 import Icon from './../components/Icon'
+import TechnologyIcons from './../components/TechnologyIcons'
 
 function Profile() {
   return (
     <div className='max-w-96 m-auto'>
       <img
         className='h-96 mask-radial-at-center mask-radial-from-45% mask-radial-to-75%'
-        src="https://angeldavidhurtado.github.io/img/angel-david-hurtado.webp"
-        alt="Ángel David Hurtado"
+        src='https://angeldavidhurtado.github.io/img/angel-david-hurtado.webp'
+        alt='Ángel David Hurtado'
       />
 
       <h1 className='text-center text-3xl font-bold my-4'>Ángel David Hurtado</h1>
 
       <ul className='flex gap-2 justify-center'>
         <li>
-          <a href="https://www.linkedin.com/in/angeldavidhurtado" target='_blank'>
-            <Icon iconSelect="linkedin" />
+          <a href='https://www.linkedin.com/in/angeldavidhurtado' target='_blank'>
+            <Icon iconSelect='linkedin' />
           </a>
         </li>
         <li>
-          <a href="https://github.com/angeldavidhurtado" target='_blank'>
-            <Icon iconSelect="github" />
+          <a href='https://github.com/angeldavidhurtado' target='_blank'>
+            <Icon iconSelect='github' />
           </a>
         </li>
         <li>
-          <a href="https://medium.com/@angeldavidhurtado" target='_blank'>
-            <Icon iconSelect="medium" />
+          <a href='https://medium.com/@angeldavidhurtado' target='_blank'>
+            <Icon iconSelect='medium' />
           </a>
         </li>
       </ul>
       <div className='flex'>
-        <div>A</div>
-        <div>B</div>
-        <div>C</div>
-        <div>D</div>
+        <div>
+          <TechnologyIcons iconSelect='react' />
+        </div>
+        <div>
+          <TechnologyIcons iconSelect='html' />
+        </div>
+        <div>
+          <TechnologyIcons iconSelect='css' />
+        </div>
+        <div>
+          <TechnologyIcons iconSelect='js' />
+        </div>
       </div>
     </div>
   )
