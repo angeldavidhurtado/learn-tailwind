@@ -5,23 +5,23 @@ function Profile() {
   return (
     <div className='max-w-96 m-auto p-4'>
       <img
-        className='mask-radial-at-center mask-radial-from-45% mask-radial-to-75%'
+        className='mask-radial-at-center mask-radial-from-45% mask-radial-to-75% animate-pulse-fade-in'
         src='https://angeldavidhurtado.github.io/img/angel-david-hurtado.webp'
         alt='Ángel David Hurtado'
       />
-      <h1 className='text-center text-3xl font-bold my-4'>Ángel David Hurtado</h1>
+      <h1 className='text-center text-3xl font-bold -mt-4 mb-4'>Ángel David Hurtado</h1>
       <ul className='flex gap-2 justify-center'>
-        <li className='bg-black p-3 inline-block rounded-full'>
+        <li className='bg-black p-3 inline-block rounded-full animate-slide-up-fade animate-delay-100'>
           <a href='https://www.linkedin.com/in/angeldavidhurtado' target='_blank'>
             <Icon iconSelect='linkedin' />
           </a>
         </li>
-        <li className='bg-black p-3 inline-block rounded-full'>
+        <li className='bg-black p-3 inline-block rounded-full animate-slide-up-fade animate-delay-200'>
           <a href='https://github.com/angeldavidhurtado' target='_blank'>
             <Icon iconSelect='github' />
           </a>
         </li>
-        <li className='bg-black p-3 inline-block rounded-full'>
+        <li className='bg-black p-3 inline-block rounded-full animate-slide-up-fade animate-delay-300'>
           <a href='https://medium.com/@angeldavidhurtado' target='_blank'>
             <Icon iconSelect='medium' />
           </a>

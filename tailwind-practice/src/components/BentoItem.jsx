@@ -14,7 +14,7 @@ function BentoItem({ iconSelect, title, description, className, iconClassName })
         iconSelect={iconSelect}
         className={`
           absolute -right-0 -bottom-0.5 size-16 -rotate-6
-          group-hover:-rotate-12 group-hover:scale-115 transition-transform
+          group-hover:-rotate-12 group-hover:scale-110 transition-transform
           ${iconClassName}
         `}
       />
