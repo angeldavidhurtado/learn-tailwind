@@ -1,17 +1,15 @@
 import Icon from './../components/Icon'
-import TechnologyIcons from './../components/TechnologyIcons'
+import BentoItem from '../components/BentoItem'
 
 function Profile() {
   return (
-    <div className='max-w-96 m-auto'>
+    <div className='max-w-96 m-auto p-4'>
       <img
-        className='h-96 mask-radial-at-center mask-radial-from-45% mask-radial-to-75%'
+        className='mask-radial-at-center mask-radial-from-45% mask-radial-to-75%'
         src='https://angeldavidhurtado.github.io/img/angel-david-hurtado.webp'
         alt='Ángel David Hurtado'
       />
-
       <h1 className='text-center text-3xl font-bold my-4'>Ángel David Hurtado</h1>
-
       <ul className='flex gap-2 justify-center'>
         <li>
           <a href='https://www.linkedin.com/in/angeldavidhurtado' target='_blank'>
@@ -29,19 +27,31 @@ function Profile() {
           </a>
         </li>
       </ul>
-      <div className='flex'>
-        <div>
-          <TechnologyIcons iconSelect='react' />
-        </div>
-        <div>
-          <TechnologyIcons iconSelect='html' />
-        </div>
-        <div>
-          <TechnologyIcons iconSelect='css' />
-        </div>
-        <div>
-          <TechnologyIcons iconSelect='js' />
-        </div>
+      <div className='grid grid-cols-5 grid-rows-2 gap-2 mt-5'>
+        <BentoItem
+          iconSelect='react'
+          title='React'
+          description='Librearía de JavaScript'
+          className='col-span-3 bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800'
+        />
+        <BentoItem
+          iconSelect='css'
+          title='CSS'
+          description='Estilos'
+          className='col-span-2 bg-gradient-to-br from-violet-700 via-violet-600 to-violet-900'
+        />
+        <BentoItem
+          iconSelect='html'
+          title='HTML'
+          description='Maquetación'
+          className='col-span-2 bg-gradient-to-br from-orange-700 via-orange-600 to-orange-800'
+        />
+        <BentoItem
+          iconSelect='js'
+          title='JavaScript'
+          description='Lenguaje de programación'
+          className='col-span-3 bg-gradient-to-br from-yellow-700 via-yellow-600 to-yellow-800'
+        />
       </div>
     </div>
   )
