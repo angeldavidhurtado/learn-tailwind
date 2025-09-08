@@ -10,4 +10,6 @@ Los cursos que tomé son:
 
 <br>
 
-Te dejo mi artículo sobre [Mi experiencia aprendiendo Tailwind CSS](https://medium.com/@angeldavidhurtado/mi-experiencia-aprendiendo-tailwind-css-39730401e9bc), Muchas gracias!
+Te dejo un artículo sobre [mi experiencia aprendiendo Tailwind CSS](https://medium.com/@angeldavidhurtado/mi-experiencia-aprendiendo-tailwind-css-39730401e9bc)
+
+Muchas gracias!
